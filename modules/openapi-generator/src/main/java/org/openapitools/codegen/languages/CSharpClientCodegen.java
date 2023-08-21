@@ -421,7 +421,7 @@ public class CSharpClientCodegen extends AbstractCSharpCodegen {
                 }
 
                 CodegenProperty last = null;
-                for (final CodegenProperty property : parentCodegenModel.vars) {
+                for (final CodegenProperty property : parentCodegenModel.readWriteVars) {
                     // helper list of parentVars simplifies templating
                     if (!propertyHash.containsKey(property.name)) {
                         final CodegenProperty parentVar = property.clone();
